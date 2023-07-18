@@ -27,8 +27,14 @@ namespace JokeApp.Controllers
                           Problem("Entity set 'ApplicationDbContext.joke'  is null.");
         }
 
-        // GET: jokes/Details/5
-        public async Task<IActionResult> Details(int? id)
+      // GET: Jokes/ShowSearchForm
+      public async Task<IActionResult> ShowSearchForm()
+      {
+         return View();
+      }
+
+      // GET: jokes/Details/5
+      public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.joke == null)
             {
